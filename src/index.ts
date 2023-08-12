@@ -14,7 +14,7 @@ conty.x = 0;
 conty.y = 0;
 app.stage.addChild(conty);
 
-const clampy: Sprite = Sprite.from("clampy.png");
+const clampy: Container = Sprite.from("clampy.png");
 clampy.x = window.innerHeight / 2 - 50;
 clampy.y = window.innerWidth / 2 - 250;
 conty.addChild(clampy);
