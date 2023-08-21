@@ -1,4 +1,4 @@
-import { Application, Container, ParticleContainer, Graphics } from 'pixi.js'
+import { Application, Container, ParticleContainer, Graphics, TextStyle, Text } from 'pixi.js'
 
 const app = new Application({
     view: document.getElementById("pixi-canvas") as HTMLCanvasElement,
@@ -31,3 +31,13 @@ app.stage.addChild(graphy); //I can add it before setting position, nothing bad 
 // Here we set it at 100,100
 graphy.x = 100;
 graphy.y = 100;
+
+const styly: TextStyle = new TextStyle({
+  align: "center",
+  fill: "#754c24",
+  fontSize: 42
+});
+const texty: Text = new Text('私に気づいて先輩！', styly); // Text supports unicode!
+// texty.text = "This is expensive to change, please do not abuse";
+
+app.stage.addChild(texty);
