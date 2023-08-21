@@ -9,15 +9,18 @@ const app = new Application({
     height: window.innerHeight
 });
 
-const particleConty: ParticleContainer = new ParticleContainer();
-// Pretty much everything that worked on a Container will work with a ParticleContainer.
-
 const conty: Container = new Container();
 conty.x = 0;
 conty.y = 0;
+
+const particleConty: ParticleContainer = new ParticleContainer();
+// Pretty much everything that worked on a Container will work with a ParticleContainer.
+
 app.stage.addChild(conty, particleConty);
 
 const clampy: Sprite = Sprite.from("clampy.png");
-clampy.x = window.innerHeight / 2 - 50;
-clampy.y = window.innerWidth / 2 - 250;
-particleConty.addChild(clampy);
+clampy.x = window.innerHeight / 2;
+clampy.y = window.innerWidth / 2;
+clampy.anchor.set(0.5, 0.5);
+
+conty.addChild(clampy);
